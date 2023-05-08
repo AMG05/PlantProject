@@ -30,31 +30,32 @@ const Default = ({ children }) => <Fragment>
             </ul>
             </nav>
             </header>
-           
-            <aside className="main-aside">
-        <p>
-        <h1 className= "aside-titles">Care</h1>
+           </div>
+           <div className="main-aside-list">
+            <aside className="main-aside" />
+       
+        <h2 className= "aside-titles">Care</h2>
         <label><input type="checkbox" name="care" value="easy"></input> Easy to care for</label>
         <label><input type="checkbox" name="care" value="unkillable"></input> Unkillable</label>
-        </p>
-        <p>
-        <h1 className= "aside-titles">Light</h1>
+     
+       
+        <h2 className= "aside-titles">Light</h2>
         <label><input type="checkbox" name="light" value="low"></input> Low light </label>
         <label><input type="checkbox" name="light" value="bright"></input> Bright light</label>
-        </p>
-        <p>
-        <h1 className= "aside-titles">Pet friendly</h1>
+       
+       
+        <h2 className= "aside-titles">Pet friendly</h2>
         <label><input type="checkbox" name="pet_friendly" value="yes"></input> Pet friendly</label>
-        </p>
-        <p>
-        <h1 className= "aside-titles">Size</h1>
+        
+        
+        <h2 className= "aside-titles">Size</h2>
         <label><input type="checkbox" name="size" value="small"></input> Small</label>
         <label><input type="checkbox" name="size" value="medium"></input> Medium</label>
         <label><input type="checkbox" name="size" value="large"></input> Large</label>
-        </p>
-        </aside>
-        </div>
+        
+    </div>
     </Header>
+    
     <Main>
     <article>
         <div className="container">
@@ -85,7 +86,7 @@ const Default = ({ children }) => <Fragment>
                     </div>
         </article>
     </Main>
-    <Footer><div className= "FooterWrapper">
+    <Footer><div className="FooterWrapper">
         
         <div className= "HorizontalSection">
             <div className="MainContent">
