@@ -1,4 +1,5 @@
 // import './modules/toggle';
+import '.modules/plants';
 
 // Importer(`tabs`)()
 // import(/* webpackChunkName: "toggle" */`./features/toggle`).then(module => module.default());
