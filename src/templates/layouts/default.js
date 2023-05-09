@@ -30,8 +30,13 @@ const Default = ({ children }) => <Fragment>
             </ul>
             </nav>
             </header>
+            
            </div>
-           <div className="main-aside-list">
+           
+    </Header>
+    
+    <Main>
+    <div className="main-aside-list">
             <aside className="main-aside" />
        
         <h2 className= "aside-titles">Care</h2>
@@ -52,15 +57,25 @@ const Default = ({ children }) => <Fragment>
         <label><input type="checkbox" name="size" value="small"></input> Small</label>
         <label><input type="checkbox" name="size" value="medium"></input> Medium</label>
         <label><input type="checkbox" name="size" value="large"></input> Large</label>
+
+        
         
     </div>
-    </Header>
-    
-    <Main>
     <article>
         <div className="container">
             <div className="list-plants">
+                <h1 >How to care for your house plants</h1>
             <ul>
+                <li>
+                    <img src="src\img\kelly-sikkema-m4kw7twpA6k-unsplash.jpg" alt="plant"></img>
+                    <h2>Plant name</h2>
+                    <h3>How to care for this plant</h3>
+                </li>
+                <li>
+                    <img src="src\img\kelly-sikkema-m4kw7twpA6k-unsplash.jpg" alt="plant"></img>
+                    <h2>Plant name</h2>
+                    <h3>How to care for this plant</h3>
+                </li>
                 <li>
                     <img src="src\img\kelly-sikkema-m4kw7twpA6k-unsplash.jpg" alt="plant"></img>
                     <h2>Plant name</h2>

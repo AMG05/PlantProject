@@ -1,26 +1,17 @@
 .main {
     display: flex;
 }
-
-.main-aside-list {
-  display:flex;
-  flex-direction: column;
-  width: 25%;
-  gap: 10px
+.main-title {
+  font-size: 25px;
+  justify-content: center;
+  font-family: Montserrat 
 }
 
 
-.aside-titles {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 20px;
-    
-}
-
-.container {
-  display: flex;
-  flex-wrap: wrap;
-}
-
+// .container {
+//   display: flex;
+//   flex-wrap: wrap;
+// }
 
 
 .list-plants {
@@ -29,37 +20,68 @@
     padding: 150px ;
     
   }
-  
+
+.main-aside-list {
+  display:flex;
+  flex-direction: column;
+  width: 45%;
+  gap: 10px;
+  padding: 25px;
+}
+
+.aside-titles {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 20px;
+  // align-items:flex-start;
+}
+
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
+.list-plants {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+}
+
   .list-plants ul {
     list-style: none;
     padding: 0;
     margin: 0;
   }
-  
-  .list-plants li {
-    display: inline-block;
-    text-align: center;
-    width: 30%;
-    margin: 20px;
-  }
-  
-  .list-plants img {
-    max-width: 100%;
-    height: auto;
-  }
-    
-  #wrapper {
-    text-align: center;
-  }
 
-//   .wrap {
-//     display: flex;
-//   }
+.list-plants li {
+  display: inline-block;
+  flex-basis: 30%;
+  padding: 10px;
+  text-align: center;
+  width:30%;
+  margin:20px;
+}
+
+
+
+.list-plants img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+
+  // .wrap {
+  //   display: flex;
+  // }
   
-//   .main-aside {
-//     width: 25%; /* Set the width of the aside element */
-//   }
+  .main-aside {
+    width: 35%; /* Set the width of the aside element */
+  }
   
-//   .list-plants {
-//     width: 75%; /* Set the width of the section element */
-//   }
+  .list-plants {
+    width: 65%; /* Set the width of the section element */
+  }

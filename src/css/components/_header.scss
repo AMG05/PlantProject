@@ -7,6 +7,10 @@
 
 }
 
+.header {
+  align-items: center;
+}
+
 nav {
     background-color: #fff;
     overflow: hidden;
@@ -18,12 +22,8 @@ nav {
     color: black;
   }
 
-//   .logo-title {
-//     font-family: Pacifico;
-//     color: green;
-//     font-size: 25px;
-    
-//   }
+
+
   
   nav ul {
     margin: 0;
@@ -48,48 +48,7 @@ nav {
  
   }
 
-// header {
-//     display: flex;
-//     align-items: center;
-//     justify-content: space-between;
-//     padding: 20px;
-//     background-color: #333;
-//     color: #fff;
-//   }
-  
-//   nav.main-nav {
-//     display: flex;
-//     align-items: center;
-//   }
-  
-//   nav.main-nav img {
-//     height: 50px;
-//     margin-right: 10px;
-//   }
-  
 
-  
-//   nav.main-nav ul {
-//     display: flex;
-//     list-style: none;
-//     margin: 0;
-//     padding: 0;
-//   }
-  
-//   nav.main-nav li {
-//     margin-right: 20px;
-//   }
-  
-//   nav.main-nav li:last-child {
-//     margin-right: 0;
-//   }
-  
-//   nav.main-nav a {
-//     color: #fff;
-//     text-decoration: none;
-//     font-size: 18px;
-//   }
-  
-//   nav.main-nav img.logo {
-//     height: 40px;
-//   }
+
+
+
