@@ -6,7 +6,7 @@ import Footer from '@components/footer';
 
 const Default = ({ children }) => <Fragment>
     <Header>
-        <p class="user"></p>
+        {/* <p class="user"></p>
     <div class="wrap">
         <header>
             <nav class="main-nav">
@@ -32,11 +32,11 @@ const Default = ({ children }) => <Fragment>
             </header>
             
            </div>
-           
+            */}
     </Header>
     
     <Main>
-    <div className="main-aside-list">
+    {/* <div className="main-aside-list">
             <aside className="main-aside" />
        
         <h2 className= "aside-titles">Care</h2>
@@ -99,9 +99,10 @@ const Default = ({ children }) => <Fragment>
             </ul>
                 </div>
                     </div>
-        </article>
+        </article> */}
     </Main>
-    <Footer><div className="FooterWrapper">
+    /* <Footer>
+        {/* <div className="FooterWrapper">
         
         <div className= "HorizontalSection">
             <div className="MainContent">
@@ -139,7 +140,9 @@ const Default = ({ children }) => <Fragment>
                 </li>
             </div>
         </div>
-    </div></Footer>
+    </div> */}
+
+ </Footer>
 </Fragment>;
 
 export default Default;

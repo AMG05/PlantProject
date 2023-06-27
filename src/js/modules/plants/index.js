@@ -1,4 +1,6 @@
-import {h, render } from 'preact';
-import PlantContainer from './containers/PlantContainer';
+import {h, render} from 'preact';
+import PlantContainer from '../plants/containers/PlantContainer';
+import App from './App';
 
-render(<PlantContainer />, document.getElementById("app"))
+
+render( <App />, document.getElementById("app"))

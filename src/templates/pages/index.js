@@ -9,9 +9,9 @@ export const title = 'Home';
 // }];
 
 const HomePage = () => <DefaultLayout>
-    <div class = "wrap">
+    {/* <div class="wrap"> */}
         <div id="app" />
-    </div>
+    {/* </div> */}
     {/* <div class="wrap">
         <header>Plants plants plants</header>
             <nav class= "main-nav">
