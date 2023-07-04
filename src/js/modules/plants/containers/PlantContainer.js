@@ -9,7 +9,7 @@ import Main from '../components/MainGrid';
 import MainGrid from '../components/MainGrid';
 import Favourites from '../components/FavouritesPage';
 import FavouritesPage from '../components/FavouritesPage';
-
+import FavouritesContainer from './FavouritesContainer';
 
 
 const PlantContainer = () =>  {
@@ -24,30 +24,33 @@ const PlantContainer = () =>  {
         if (savedPlants){
             setPlantData(JSON.parse(savedPlants));
         } else {
-        fetch('https://perenual.com/api/species-list?page=1&key=sk-6iV8645263d901b63737')
-            .then(res => res.json())
-            .then(data => {
-                setPlantData(data.data);
-                localStorage.setItem('plantData', JSON.stringify(data.data));
-    })
-    .catch(error => {
-        console.error('Error fetching plant data', error);
-    });
-}
+            fetch('https://perenual.com/api/species-list?page=1&key=sk-6iV8645263d901b63737')
+                .then(res => res.json())
+                .then(data => {
+                    setPlantData(data.data);
+                    localStorage.setItem('plantData', JSON.stringify(data.data));
+                })
+                .catch(error => {
+                    console.error('Error fetching plant data', error);
+                });
+        }
 
-}, []);
+    }, []);
+
+    useEffect(() => {
+        localStorage.setItem('favourites', JSON.stringify(favourites));
+    }, [favourites]);
 
 
-const handleFavourite = (plant) => {
-    setFavourites((prevFavouritePlants) => [...prevFavouritePlants, plant]);
+    const handleFavourite = plant => {
+        setFavourites(prevFavouritePlants => [...prevFavouritePlants, plant]);
     
-};
+    };
 
     return (
                 <div>
                     <NavBar />
                 <AllPlants plantData={plantData} onFavourite={handleFavourite} />
-                <FavouritesPage favourites={favourites} />
                 <h2>Favourites</h2>
                 <ul>{favourites.map(plant => (
                     <li key={plant.id}>{plant.common_name}</li>))}</ul>

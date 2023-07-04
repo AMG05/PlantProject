@@ -1,4 +1,5 @@
 import { h } from 'preact';
+import FavouritesContainer from '../containers/FavouritesContainer';
 
 const FavouritesPage = ({ favourites }) => {
 
