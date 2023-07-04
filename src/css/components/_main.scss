@@ -1,24 +1,72 @@
-.main {
-    display: flex;
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+
+.main-list-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);;
+    gap: 5px;
+    align-items: center;
+
 }
-.main-title {
-  font-size: 25px;
-  justify-content: center;
-  font-family: Montserrat 
-}
-
-
-// .container {
-//   display: flex;
-//   flex-wrap: wrap;
-// }
-
 
 .list-plants {
-    justify-content: right;
-    margin-top: 0 auto;
-    padding: 150px ;
+  
+  display: contents;
+    background-color: aquamarine;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    margin: 20px 10px 20px 20px;
+    padding: 15px;
     
+  }
+
+  .list-plants li {
+    align-items: center;
+  }
+
+  .list-plants img {
+    border-radius: 15px;
+  }
+
+  .list-plants h2 {
+    font-family: 'Indie Flower';
+    font-size: larger;
+    padding-top: 6px;
+    text-align: center;
+    color: black;
+  }
+
+  .list-plants h3 {
+    font-family: 'Indie Flower';
+    font-size: larger;
+    padding-top: 6px;
+    text-align: center;
+    color: white;
+  }
+
+  .list-plants p {
+    font-family: 'Indie Flower';
+    font-size: larger;
+    padding-top: 6px;
+    text-align: center;
+    color: black;
+  }
+
+  .list-plants btn {
+      font-family: 'Indie Flower';
+      align-items: center;
+      background-color: #09433D;
+      border:1px solid #09433D;
+      border-radius: 0.5rem;
+      color: white;
+      font-size: 1em;
+      font-weight: 400;
+      padding: 0.7rem 1.2rem;
+      cursor: pointer;
+      box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+      text-align: center;
+      transition: all 0.2s ease-out;
   }
 
 .main-aside-list {
@@ -36,35 +84,6 @@
 }
 
 
-.container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-
-.list-plants {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 20px;
-}
-
-  .list-plants ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-
-.list-plants li {
-  display: inline-block;
-  flex-basis: 30%;
-  padding: 10px;
-  text-align: center;
-  width:30%;
-  margin:20px;
-}
-
 
 
 .list-plants img {
@@ -73,15 +92,8 @@
 }
 
 
-
-  // .wrap {
-  //   display: flex;
-  // }
   
   .main-aside {
     width: 35%; /* Set the width of the aside element */
   }
-  
-  .list-plants {
-    width: 65%; /* Set the width of the section element */
-  }
+

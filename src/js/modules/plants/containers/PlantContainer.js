@@ -1,23 +1,57 @@
+import { h } from 'preact';
 import { useState, useEffect } from 'preact/hooks';
 import { Router, Route, Link } from 'preact-router';
-import PlantList from '../components/PlantList';
-import { h } from 'preact';
+import AllPlants from '../components/AllPlants';
+import NavBar from '../components/NavBar';
+import Aside from '../components/Aside';
+import Footer from '../components/Footer';
+import Main from '../components/MainGrid';
+import MainGrid from '../components/MainGrid';
+import Favourites from '../components/FavouritesPage';
+import FavouritesPage from '../components/FavouritesPage';
+
+
 
 const PlantContainer = () =>  {
 
     const [plantData, setPlantData] = useState([]);
+    const [favourites, setFavourites] = useState([]);
+    
 
     useEffect(() => {
+        const savedPlants = localStorage.getItem('plantData');
+
+        if (savedPlants){
+            setPlantData(JSON.parse(savedPlants));
+        } else {
         fetch('https://perenual.com/api/species-list?page=1&key=sk-6iV8645263d901b63737')
             .then(res => res.json())
-            .then(plantData => setPlantData(plantData));
-    }
-    );
+            .then(data => {
+                setPlantData(data.data);
+                localStorage.setItem('plantData', JSON.stringify(data.data));
+    })
+    .catch(error => {
+        console.error('Error fetching plant data', error);
+    });
+}
+
+}, []);
+
+
+const handleFavourite = (plant) => {
+    setFavourites((prevFavouritePlants) => [...prevFavouritePlants, plant]);
+    
+};
 
     return (
                 <div>
-                <h1>Plants:</h1>
-                <PlantList plantData={plantData} />
+                    <NavBar />
+                <AllPlants plantData={plantData} onFavourite={handleFavourite} />
+                <FavouritesPage favourites={favourites} />
+                <h2>Favourites</h2>
+                <ul>{favourites.map(plant => (
+                    <li key={plant.id}>{plant.common_name}</li>))}</ul>
+                <Footer />
                 </div>
     );
 };
