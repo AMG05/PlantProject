@@ -13,8 +13,8 @@ const AllPlants = ({ filteredData, onFavourite }) => {
     const plantList = filteredData.map((item) => {
         return<div className="list-plants">
             <ul>
-            <img src="src\img\kelly-sikkema-m4kw7twpA6k-unsplash.jpg" alt="plant" width={200} height={200}></img>
-            <li key={item.id}><h2>{item.common_name}</h2></li>
+            <img src={item.default_image.regular_url} alt="plant" width={200} height={200}></img>
+            <li key={item.id}><h2>{item.common_name} </h2></li>
             <li key={item.id}><h3>How to care for me:</h3> <p>{item.watering} Watering</p> </li>
             <li key={item.id}><h3>Where I thrive:</h3> <p>{item.sunlight}</p> </li>
             <li>
