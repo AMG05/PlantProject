@@ -30,7 +30,8 @@ const FavList = () => {
     return (
     <div className="list-plants">
         <ul>{favourites.map(plant => (
-            <li key={plant.id}><h2>{plant.common_name}</h2><h3>How to care for me:</h3> <p>{plant.watering} Watering</p><h3>Where I thrive:</h3> <p>{plant.sunlight}</p>
+            <li key={plant.id}><img src={plant.default_image.regular_url} alt="plant" width={200} height={200} />
+                <h2>{plant.common_name}</h2><h3>How to care for me:</h3> <p>{plant.watering} Watering</p><h3>Where I thrive:</h3> <p>{plant.sunlight}</p>
             <button className="btn" onClick={() => removeFromFavourites(plant.id)}>Remove</button></li>))}
             </ul>
     </div>

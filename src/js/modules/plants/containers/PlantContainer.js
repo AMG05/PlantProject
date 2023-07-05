@@ -56,7 +56,7 @@ const PlantContainer = () =>  {
 
             if (wateringFilter.includes('frequent watering') && !plant.watering.includes('Frequent')) {
                 return false;
-              }
+            }
         
             return true;
         });
@@ -74,30 +74,70 @@ const PlantContainer = () =>  {
     return (
                 <div>
                     <NavBar />
+                    <div className="filtered-container">
+                    <div className="checkbox-container">
                     <label>
-        Sunlight:
-        <select value={sunlightFilter} onChange={e => setSunlightFilter(e.target.value)}>
-          <option value="">All</option>
-          <option value="full sun">Full Sun</option>
-          <option value="filtered shade">Filtered Shade</option>
-        </select>
-      </label>
+                Sunlight:
+                
+                <input
+                    type="checkbox"
+                    name="sunlight"
+                    value="full sun"
+                    checked={sunlightFilter === 'full sun'}
+                    onChange={e =>
+                    setSunlightFilter(e.target.checked ? 'full sun' : '')
+                    }
+  />
+  Full Sun
+</label>
+</div>
+<div className="checkbox-container">
+<label>
+  <input
+      type="checkbox"
+      name="sunlight"
+      value="filtered shade"
+      checked={sunlightFilter === 'filtered shade'}
+      onChange={e =>
+      setSunlightFilter(e.target.checked ? 'filtered shade' : '')
+    }
+  />
+  Filtered Shade
+</label>
+</div>
+<div className="checkbox-container">
+<label>
+  Watering:
+  <input
+      type="checkbox"
+      name="watering"
+      value="frequent watering"
+      checked={wateringFilter === 'frequent watering'}
+      onChange={e =>
+      setWateringFilter(e.target.checked ? 'frequent watering' : '')
+    }
+  />
+  Frequent Watering
+</label>
+</div>
+<div className="checkbox-container">
+<label>
+  <input
+      type="checkbox"
+      name="watering"
+      value="average watering"
+      checked={wateringFilter === 'average watering'}
+      onChange={e =>
+      setWateringFilter(e.target.checked ? 'average watering' : '')
+    }
+  />
+  Average Watering
+</label>
+</div>
+</div>
 
-      <label>
-        Watering:
-        <select value={wateringFilter} onChange={e => setWateringFilter(e.target.value)}>
-          <option value="">All</option>
-          <option value="frequent watering">Frequent Watering</option>
-          <option value="average watering">Average Watering</option>
-        </select>
-      </label>
                 <AllPlants filteredData={filteredData} onFavourite={handleFavourite} />
-                <h2>Favourites</h2>
-                <ul>{favourites.map(plant => (
-                    <li key={plant.id}>{plant.common_name}</li>))}</ul>
-                     <h2>Favourites</h2>
-                <ul>{plantData.filter(plant => plant.sunlight.includes('full sun')).map(filteredPlant => (
-                    <li key={filteredPlant.id}>{filteredPlant.common_name}</li>))}</ul>
+                
                 <Footer />
                 </div>
     );

@@ -3,16 +3,14 @@
 
 .main-list-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);;
     gap: 5px;
     align-items: center;
 
 }
 
 .list-plants {
-  
-  display: contents;
-    background-color: aquamarine;
+    display: contents;
+    background-color: #D2ECDF;
     border-radius: 15px;
     display: flex;
     justify-content: center;
@@ -21,12 +19,13 @@
     
   }
 
-  .list-plants li {
+  .list-plants ul li {
     align-items: center;
   }
 
   .list-plants img {
     border-radius: 15px;
+    justify-content: center;
   }
 
   .list-plants h2 {
@@ -39,10 +38,10 @@
 
   .list-plants h3 {
     font-family: 'Indie Flower';
-    font-size: larger;
+    font-size: x-large;
     padding-top: 6px;
     text-align: center;
-    color: white;
+    color: #75B524;
   }
 
   .list-plants p {
@@ -53,21 +52,29 @@
     color: black;
   }
 
-  .list-plants btn {
+  .list-plants button btn {
+    justify-content: center;
       font-family: 'Indie Flower';
-      align-items: center;
       background-color: #09433D;
       border:1px solid #09433D;
       border-radius: 0.5rem;
       color: white;
       font-size: 1em;
-      font-weight: 400;
       padding: 0.7rem 1.2rem;
       cursor: pointer;
       box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
-      text-align: center;
+      font-weight: 600;
+      padding: 0.7rem 1.2rem;
       transition: all 0.2s ease-out;
+      margin-left: 14px;
   }
+
+  @media (min-width: 850px) {
+    .main-list-container {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  
+  } 
 
 .main-aside-list {
   display:flex;
@@ -97,3 +104,32 @@
     width: 35%; /* Set the width of the aside element */
   }
 
+  .filtered-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    font-size: large;
+    color: #09433D;
+    background-color: azure;
+    padding: 1rem 1rem;
+  }
+  .checkbox-container {
+    align-items: center;
+    margin-bottom: 10px;
+    font-family: 'Indie Flower';
+  }
+  
+  .checkbox-container input[type="checkbox"] {
+    margin-right: 5px;
+  }
+  
+  .checkbox-container label {
+    font-weight: bold;
+  }
+  
+  /* Optional: Add some additional styling for checked checkboxes */
+  .checkbox-container input[type="checkbox"]:checked + label {
+    color: #3366cc;
+    /* Example: Change the color of the label when the checkbox is checked */
+  }
+  
