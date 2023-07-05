@@ -15,6 +15,16 @@
     }
 }
 
+.horizontalList{
+   font-family: 'Indie Flower';
+}
+
+.horizontalList a {
+    font-family: 'Indie Flower';
+    list-style: none;
+ }
+ 
+
 .horizontalSection {
     display: flex;
     justify-content: space-between;
