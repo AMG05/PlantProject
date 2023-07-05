@@ -2,7 +2,7 @@ import { h } from 'preact';
 import FavouriteButton from './FavouriteButton';
 
 
-const AllPlants = ({ plantData, onFavourite }) => {
+const AllPlants = ({ filteredData, onFavourite }) => {
 
    function handleFavourite(plant) {
         // alert('U clicked me');
@@ -10,7 +10,7 @@ const AllPlants = ({ plantData, onFavourite }) => {
 
         
     }
-    const plantList = plantData.map((item) => {
+    const plantList = filteredData.map((item) => {
         return<div className="list-plants">
             <ul>
             <img src="src\img\kelly-sikkema-m4kw7twpA6k-unsplash.jpg" alt="plant" width={200} height={200}></img>

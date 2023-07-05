@@ -1,4 +1,4 @@
-.FooterWrapper {
+.footer {
     padding: 64px 5%;
     > hr {
         margin-block: 64px 32px;
@@ -7,7 +7,7 @@
         background-color: var(--clr-grey-200);
     }}
 
-.HorizontalList{
+.horizontalList{
     display: flex;
     gap: 1rem;
     > li {
@@ -15,7 +15,7 @@
     }
 }
 
-.HorizontalSection {
+.horizontalSection {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -32,3 +32,10 @@
     flex-direction: column;
     gap: 1rem;
 }
+
+.input-label {
+    font-size: small;
+    font-weight: 300;
+    margin-bottom: 8px;
+}
+

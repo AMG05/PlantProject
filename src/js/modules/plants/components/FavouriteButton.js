@@ -9,7 +9,7 @@ const handleClick = () => {
 
     return (
     
-    <button className="btn" onClick={handleClick}>Save Plant</button>
+    <button className="btn" onClick={handleClick}>Save to Favourites</button>
     
 );
 };
